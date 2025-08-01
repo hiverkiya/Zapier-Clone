@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@types/typescript": "^0.4.29",
-    "typescript": "^5.9.2"
-  }
-}
