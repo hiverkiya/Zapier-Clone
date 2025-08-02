@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@prisma/client": "^6.13.0",
+    "@types/typescript": "^0.4.29",
+    "kafkajs": "^2.2.4",
+    "prisma": "^6.13.0",
+    "typescript": "^5.9.2"
+  }
+}
