@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // ESM and Environment Settings
+    "module": "esnext",
+    "target": "ES2022",
+    "moduleResolution": "node",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+
+    // Optional if using `import fs from "fs"` style
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
+    // Type Checking
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Output Extras
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Miscellaneous
+    "skipLibCheck": true,
+    "moduleDetection": "force"
+  },
+  "include": ["src"]
+}
