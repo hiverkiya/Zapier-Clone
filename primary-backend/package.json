@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "npx tsc -b && node dist/index.js"
+    "start": "npx tsc -b && node dist/index.js",
+    "build": "tsup src/index.ts --format esm --dts && node dist/index.js"
   },
   "type": "module",
   "dependencies": {
@@ -16,5 +17,9 @@
     "prisma": "^6.13.0",
     "typescript": "^5.9.2",
     "zod": "^4.0.14"
+  },
+  "devDependencies": {
+    "babel-plugin-add-import-extension": "^1.6.0",
+    "tsup": "^8.5.0"
   }
 }

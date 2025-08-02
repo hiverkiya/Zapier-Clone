@@ -7,7 +7,7 @@
     // ESM and Environment Settings
     "module": "esnext",
     "target": "ES2022",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler", // ✅ Required for correct `.js` extension behavior
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
 

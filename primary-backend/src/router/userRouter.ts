@@ -1,13 +1,14 @@
 import { Router } from 'express';
-import { authMiddleware } from '../authMiddleware';
-import { SignInSchema, SignUpSchema } from '../types/zod';
+import { authMiddleware } from '../authMiddleware.js';
+import { SignInSchema, SignUpSchema } from '../types/zod.js';
 import { prismaClient } from '../database';
 import jwt from 'jsonwebtoken';
-import JWT_PASSWORD from '../config';
+import { JWT_PASSWORD } from '../config';
+
 const userRouter = Router();
 userRouter.post('/signup', async (req, res) => {
   console.log('Signup handler');
-  const body = req.body.username;
+  const body = req.body;
   const parsedData = SignUpSchema.safeParse(body);
   if (!parsedData.success) {
     return res.status(411).json({
@@ -38,7 +39,7 @@ userRouter.post('/signup', async (req, res) => {
 });
 userRouter.post('/signin', async (req, res) => {
   console.log('Signin handler');
-  const body = req.body.username;
+  const body = req.body;
   const parsedData = SignInSchema.safeParse(body);
   if (!parsedData.success) {
     return res.status(411).json({

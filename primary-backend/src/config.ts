@@ -1,1 +1,1 @@
-export default const JWT_PASSWORD = '123password';
+export const JWT_PASSWORD = '123password';

@@ -1,6 +1,7 @@
 import type { NextFunction, Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
-import JWT_PASSWORD from './config';
+import { JWT_PASSWORD } from './config';
+
 export function authMiddleware(req: Request, res: Response, next: NextFunction) {
   const token: string = req.headers.authorization as unknown as string;
   try {

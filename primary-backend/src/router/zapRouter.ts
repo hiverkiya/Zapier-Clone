@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { authMiddleware } from '../authMiddleware';
+
 const zapRouter = Router();
 
 zapRouter.post('/', authMiddleware, (req, res) => {
