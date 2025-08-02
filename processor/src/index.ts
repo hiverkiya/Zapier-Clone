@@ -20,6 +20,12 @@ async function main() {
         value: row.zapRunId,
       })),
     });
+
+    await client.zapRunOutBox.deleteMany({
+      where: {
+        id: { in: pendingRows.map((x) => x.id) },
+      },
+    });
   }
 }
 main();

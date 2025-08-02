@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "npx tsc -b && node dist/index.js"
+  },
   "type": "module",
   "dependencies": {
     "@prisma/client": "^6.13.0",
