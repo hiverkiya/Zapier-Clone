@@ -70,7 +70,7 @@ userRouter.post('/signin', async (req, res) => {
     token: token,
   });
 });
-userRouter.get('/user', authMiddleware, async (req, res) => {
+userRouter.get('/', authMiddleware, async (req, res) => {
   console.log('signin handler');
   //@ts-ignore
   const id = req.id;
